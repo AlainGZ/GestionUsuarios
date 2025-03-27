@@ -22,7 +22,7 @@ public class UsuarioController {
 	public List<Usuario> obtenerTodos(){
 		return usuarioService.obtenerTodo();
 	}
-	@GetMapping("{/id}")
+	@GetMapping("/{id}")
 	public Usuario buscarPorId(@PathVariable Long id){
 		return usuarioService.obtenerPorId(id).orElseThrow(() -> new RuntimeException("Usuario No encontrado"));
 	}
